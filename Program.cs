@@ -67,11 +67,61 @@
 // }
 
 //задание 6
-for (int i = 1; i <= 30; i++) {
-    if (i % 3 == 0) {
-        continue;
-    }
-    if (i % 10) & (i > 20) {
-        break;
-    }
+// for (int i = 1; i <= 30; i++) {
+//     if (i % 3 == 0) {
+//         continue;
+//     }
+//     if ((i % 10 == 0) & (i > 20))
+//     {
+//         break;
+//     }
+//     Console.WriteLine(i);   
+// }
+
+//Итоговая задача. «Угадай число»
+// int secret = 42;
+// int schet = 1;
+// bool flag = false;
+// int n = 0;
+// Console.Write("Введите число: ");
+// n = Convert.ToInt32(Console.ReadLine());
+
+// while (schet != 5)
+// {
+//     if (n == secret)
+//     {
+//         Console.WriteLine($"Победа! Попыток: {schet}");
+//         flag = true;
+//         break;
+//     }
+//     if (n < secret)
+//     {
+//         Console.WriteLine("Больше");
+//         schet++;
+//     }
+//     else
+//     {
+//         Console.WriteLine("Меньше");
+//         schet++;
+//     }
+//     Console.Write("Введите число: ");
+//     n = Convert.ToInt32(Console.ReadLine());
+// }
+// if (flag == false) {
+//     Console.WriteLine("Вы проиграли, число было 42");
+// }
+
+//Дополнительное задание
+int n = 0;
+Console.Write("Введите целое положительное число: ");
+n = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
+int len = 0;
+while (n > 0)
+{
+    sum += n % 10;
+    len++;
+    n = n / 10;
 }
+Console.WriteLine($"Сумма цифр числа n: {sum}");
+Console.WriteLine($"Количество цифр числа n: {len}");
